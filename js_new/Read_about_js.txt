@@ -1,0 +1,11 @@
+You can absolutely use custom JavaScript on top of Bootstrap's default scripts.
+
+You'll want to keep your custom script(s) in a separate file to Bootstrap's JavaScript, remembering that external files are loaded from top-to-bottom, and that you'll need to load jQuery before loading Bootstrap's JavaScript.
+
+Simply include your own JavaScript files after you load Bootstrap's JavaScript file to have your changes override those introduced by Bootstrap:
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="custom_script_1.js"></script>
+<script src="custom_script_2.js"></script>

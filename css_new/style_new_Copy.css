@@ -1,0 +1,220 @@
+/* BOX MODEL - nastavíme intuitivnější box model (border-box) */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/*
+Bootstrap 4 breakpointy: 576px, 768px, 992px, 1200px
+xs: (max-width: 575px)
+sm: (min-width: 576px) and (max-width: 767px)
+md: (min-width: 768px) and (max-width: 991px)
+lg: (min-width: 992px) and (max-width: 1199px)
+xl: (min-width: 1200px)
+
+Barvy
+dark yellow: #FF5000
+yellow light: #F2EEDE
+*/
+
+/* --- under this line is customized CSS --------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
+
+/* TYPOGRAFIE - fonts,headers ... */
+
+body {
+  /* all text on the web will be written by font Lora */
+	font-family: 'Lora', serif;
+	}
+
+h1,
+h2,
+h3,
+h4 {
+  /* all headers (they already are written by font Lora) will be written no-bold italics */
+	font-weight: normal;
+	font-style: italic;
+	}
+
+h2 {
+  /* všechny nadpisy sekcí (h2) jsou velkým písmem a vycentrované a je pod nimi velká mezera*/
+	font-size: 48px;
+	text-align: center;
+	margin-bottom: 45px;
+	}
+
+h3 {
+  /* nadpisy bloků uvnitř sekce (h3) jsou tmave zlute */
+  	color: #FF5000;
+	}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* MENU */
+/* musíme stylovat s takovou specificitou, jako sám Bootstrap, jinak se nám nepodaří menu obarvit */
+/*background-color: #FFC744;*/
+.navbar-dark .navbar-nav .nav-link {
+  	color: #fff;
+  	padding: 1rem;
+	}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  	color: #FF5000;	
+	}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* NADPISY V TABULCE - bootstrap 4 has default caption css style - caption-side: bottom*/
+/* text-align: center; - vycentruje text*/
+caption { 
+	caption-side:top; 
+	color: #FF5000;
+	text-align: center;
+	font-size: 25px
+	 }
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* JAK VYPADAJI SEKCE */
+.sekce {
+  /* všechny sekce mají odsazení shora a zespodu */
+	padding-top: 60px;
+	padding-bottom: 45px;}
+
+.sekce-yellow-light {
+	background-color: #F2EEDE;}
+
+.sekce-dark-yellow.text-warning {
+	color: #FF5000}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* JAK VYPADA SEKCE SKUPINY */
+.skupiny {
+  /* všecny obrázky v sekci skupiny budou mít tečkovaný zluty rámeček */
+	padding: 2px;
+	border: 2px dotted#FF5000;}
+
+.skupiny-dark-yellow {
+	font-color: #FF5000;}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* JAK VYPADAJI LINKY */
+.link-external {
+	    color: #000000;
+    	text-decoration: none
+	}
+
+.link-external:hover {
+	    color: #FF5000;
+    	text-decoration: none
+	}
+
+  .sponzori { 
+      width: 100%;
+      margin-bottom:2rem;
+
+  }
+
+
+ /* ---------------------------------------------------------------------------------------------------------------------------------------- */
+ /* SCROLLING */ 
+.wrapper {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+.fixed-bg {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%; 
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: table;
+}
+
+.fixed-bg h1 {
+  padding: 10rem 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.scroll-bg {
+  background-color: #0f0f0a;
+  padding: 10px 70px;
+  color: #676767;
+}
+
+.bg-1 {
+  background-image: url('../images_new/bagroundshort.jpg')
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* PHOTOGALLERY -sorting into 3 columns */ 
+.gal {	
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; 
+	
+	}	
+	.gal img{ width: 100%; padding: 7px 0;}
+@media (max-width: 500px) {
+		
+		.gal {
+	
+	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;  
+	
+	}
+		
+	}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* PHOTOGALLERY - toto dela ty jine veci - prohlizeni :-D  */ 
+  
+  .gallery-block.compact-gallery .item .image{
+	transition: 0.8s ease;
+  }
+  
+  .gallery-block.compact-gallery .item .info{
+	position: relative;
+	display: inline-block;
+  } 
+  
+  @media (min-width: 576px) {
+  
+	.gallery-block.compact-gallery .item .description {
+	  opacity: 0; 
+	}
+  
+	.gallery-block.compact-gallery .item a:hover .description {
+	  opacity: 1; 
+	} 
+  
+	.gallery-block .zoom-on-hover:hover .image {
+	  transform: scale(1.4);
+	  opacity: 0.7; 
+	}
+  }
+  
+	  
+
